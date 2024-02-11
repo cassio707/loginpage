@@ -29,4 +29,8 @@ function checkstatus(){
         //add custom massage
         spanMassage.innerHTML="login in successful"        
     }
+    setTimeout(function(){
+        Modlal.classList.remove('opacity-100')
+        Modlal.classList.add('w-1')
+    }, 2000)
 }
