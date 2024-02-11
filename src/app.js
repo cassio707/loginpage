@@ -1,12 +1,32 @@
-function checkpassword(){
-    let inpuuserName = document.querySelector('#username')
-    let inputpassWord = document.querySelector('#password')
-    console.log(inpuuserName.innerHTML.length)
-     console.log(inputpassWord.innerHTML.length)
-    if((inpuuserName.innerHTML.length < 12) || (inputpassWord.innerHTML.length<8)){
-        alert("نام کاربری و رمز عبور را با دقت وارد کنید")
+//get username input
+let inputuserName = document.querySelector('#username')
+//get password input
+let inputpassWord = document.querySelector('#password')
+//get modal div tag
+let Modlal = document.getElementById("modal")
+//get modal span tag
+let spanMassage = document.querySelector('.massege')
+//function for checking password status
+function checkstatus(){
+    //get username value
+    let usernameValue = inputuserName.value
+    //get password value
+    let passwordValue = inputpassWord.value
+    //check username and password status
+    if((usernameValue.length < 12) || (passwordValue.length<8)){
+        //add class to modal
+        Modlal.classList.add('opacity-100','w-auto')
+        //remove class to modal
+        Modlal.classList.remove('w-1')
+        //add custom massage
+        spanMassage.innerHTML="plaese check data"
     }
     else {
-        alert("با موفقیت وارد شدید")
+        //add class to modal
+        Modlal.classList.add('opacity-100','w-auto')
+        //remove class to modal
+        Modlal.classList.remove('w-1')
+        //add custom massage
+        spanMassage.innerHTML="login in successful"        
     }
 }
