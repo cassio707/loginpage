@@ -17,8 +17,10 @@
             <!--input group -->
             <div class="flex flex-col gap-y-4 items-center justify-start text-zinc-900">
                 <h1 class="text-zinc-800 text-3xl font-bold">Login Form</h1>
-                <input type="text" name="" id="username" class="bg-white rounded-3xl text-2xl p-4 shadow-sm w-full outline-none border-[1px] border-amber-500/70 focus:border-amber-500 transition-all" placeholder="Enter Username :">
-                <input type="password" name="" id="password" class="bg-white rounded-3xl text-2xl p-4 shadow-sm w-full outline-none border-[1px] border-amber-500/70 focus:border-amber-500 transition-all" placeholder="Enter Password :">
+                <input type="text" onkeydown="usernamecheck()" name="" id="username" class="bg-white rounded-3xl text-2xl p-4 shadow-sm w-full outline-none border-[1px] border-amber-500/70 focus:border-amber-500 transition-all" placeholder="Enter Username :">
+                <input type="password" onkeydown="passwordcheck()" name="" id="password" class="bg-white rounded-3xl text-2xl p-4 shadow-sm w-full outline-none border-[1px] border-amber-500/70 focus:border-amber-500 transition-all" placeholder="Enter Password :">
+                <span id="usernameCheck" class="hidden self-start text-black/20 text-2xl transition-all"></span>
+                <span id="passwordCheck" class="hidden self-start text-black/20 text-2xl transition-all"></span>
                 <button onclick="checkstatus()" class="w-full bg-orange-500 text-black font-bold p-2 py-4 rounded-2xl hover:bg-black hover:text-orange-500 transition-all delay-75">Submit</button>
             </div>
         </section>
