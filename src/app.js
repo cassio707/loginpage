@@ -10,6 +10,10 @@ let spanMassage = document.querySelector('.massege')
 let spanUsernamecheck = document.querySelector('#usernameCheck')
 //get passwordCheck span
 let spanPasswordcheck = document.querySelector('#passwordCheck')
+//event check for username input
+inputuserName.addEventListener('blur',usernamecheck)
+//event check for username input
+inputpassWord.addEventListener('blur',passwordcheck)
 //function checkkey username
 function usernamecheck(){
     //get username value
